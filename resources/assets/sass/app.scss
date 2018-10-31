@@ -12,3 +12,33 @@ $fa-font-path: "../webfonts";
 @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "~@fortawesome/fontawesome-free/scss/solid.scss";
 @import "~@fortawesome/fontawesome-free/scss/brands.scss";
+
+.brand-link {
+    padding: 1.65rem 0.5rem !important;
+    font-size: 1.8rem !important;
+}
+
+[class*="sidebar-dark"] .brand-link {
+    color: rgba(79, 160, 196,1) !important;
+}
+
+.navbar {
+    min-height: 61px !important;
+}
+
+.brand-image {
+    max-height: 34px !important;
+    margin-left: .2rem !important;
+}
+
+.nav-sidebar > .nav-item .nav-icon {
+    text-align: center !important;
+    width: 1.6rem !important;
+    font-size: 1.6rem !important;
+    margin-right: 0.8rem !important;
+    margin-left: -0.6rem !important;
+}
+
+.navbar-expand .navbar-nav .nav-link {
+    padding-top: 0 !important;
+}

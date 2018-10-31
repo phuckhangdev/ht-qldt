@@ -9800,8 +9800,8 @@ body,
 }
 
 .brand-link {
-  padding: 1.8rem 0.5rem;
-  font-size: 1.8rem;
+  padding: 0.8125rem 0.5rem;
+  font-size: 1.25rem;
   display: block;
   line-height: 1.5;
   white-space: nowrap;
@@ -9813,7 +9813,7 @@ body,
 }
 
 [class*="sidebar-dark"] .brand-link {
-  color: rgba(79, 160, 196,1);
+  color: rgba(255, 255, 255, 0.8);
   border-bottom: 1px solid #4b545c;
 }
 
@@ -9825,9 +9825,9 @@ body,
 .brand-image {
   float: left;
   line-height: .8;
-  max-height: 30px;
+  max-height: 34px;
   width: auto;
-  margin-left: .4rem;
+  margin-left: .8rem;
   margin-right: .5rem;
   margin-top: -3px;
 }
@@ -22475,7 +22475,7 @@ button.close {
 }
 
 /*!
- * Font Awesome Free 5.4.1 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.4.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 
@@ -23881,6 +23881,10 @@ readers do not read off random characters that represent icons */
 
 .fa-d-and-d:before {
   content: "\F38D";
+}
+
+.fa-d-and-d-beyond:before {
+  content: "\F6CA";
 }
 
 .fa-dashcube:before {
@@ -26227,10 +26231,6 @@ readers do not read off random characters that represent icons */
   content: "\F25D";
 }
 
-.fa-rendact:before {
-  content: "\F3E4";
-}
-
 .fa-renren:before {
   content: "\F18B";
 }
@@ -27019,6 +27019,10 @@ readers do not read off random characters that represent icons */
   content: "\F2C8";
 }
 
+.fa-think-peaks:before {
+  content: "\F731";
+}
+
 .fa-thumbs-down:before {
   content: "\F165";
 }
@@ -27467,6 +27471,10 @@ readers do not read off random characters that represent icons */
   content: "\F028";
 }
 
+.fa-vr-cardboard:before {
+  content: "\F729";
+}
+
 .fa-vuejs:before {
   content: "\F41F";
 }
@@ -27599,6 +27607,10 @@ readers do not read off random characters that represent icons */
   content: "\F298";
 }
 
+.fa-wpressr:before {
+  content: "\F3E4";
+}
+
 .fa-wrench:before {
   content: "\F0AD";
 }
@@ -27685,7 +27697,7 @@ readers do not read off random characters that represent icons */
 }
 
 /*!
- * Font Awesome Free 5.4.1 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.4.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 
@@ -27693,8 +27705,8 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Free';
   font-style: normal;
   font-weight: 900;
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?20b351a6af2d523589fd193785e7d7f0);
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?20b351a6af2d523589fd193785e7d7f0) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?1dc5b6dd4bf409a6f919be38603f76a0) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff?997f6b1819184c54248de33c81b7bb0c) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf?63726a69fa60cb67459140ccaf679f96) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg?1d220cf9da36861171fa90d3c164f4d3) format("svg");
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?baa1e2496e8c71f636587c32f4016ca4);
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?baa1e2496e8c71f636587c32f4016ca4) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?fd531d212b567d6049f400165473589f) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff?09bc9e8c7d6dfdace635ea073974db13) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf?e143b57de78138e6d5963908afa7e393) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg?3f759796d3d16b8434841d61cd2c007a) format("svg");
 }
 
 .fa,
@@ -27704,7 +27716,7 @@ readers do not read off random characters that represent icons */
 }
 
 /*!
- * Font Awesome Free 5.4.1 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.4.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 
@@ -27712,11 +27724,41 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Brands';
   font-style: normal;
   font-weight: normal;
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?f2594ef62455697f61dc99862c19afba);
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?f2594ef62455697f61dc99862c19afba) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?921f1150167369cf4c400135a4905728) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff?9d56249d09070f656a1c52e566448f0d) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf?ab673bac3a9e36cb1d4e54777c413fe3) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg?c862e94cbef741d18838774587e3c49d) format("svg");
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?a31c967484b343189fc58bce914ed245);
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?a31c967484b343189fc58bce914ed245) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?e4a6cecbe2bb89b0722b5dc85090af7c) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff?eef6051639f95300dbf0293ad216c6b0) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf?dec02372212aab5a2e5294f1a11756ed) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg?3f4d4ad447e748754e994a11ff8c6a6f) format("svg");
 }
 
 .fab {
   font-family: 'Font Awesome 5 Brands';
+}
+
+.brand-link {
+  padding: 1.65rem 0.5rem !important;
+  font-size: 1.8rem !important;
+}
+
+[class*="sidebar-dark"] .brand-link {
+  color: #4fa0c4 !important;
+}
+
+.navbar {
+  min-height: 61px !important;
+}
+
+.brand-image {
+  max-height: 34px !important;
+  margin-left: .2rem !important;
+}
+
+.nav-sidebar > .nav-item .nav-icon {
+  text-align: center !important;
+  width: 1.6rem !important;
+  font-size: 1.6rem !important;
+  margin-right: 0.8rem !important;
+  margin-left: -0.6rem !important;
+}
+
+.navbar-expand .navbar-nav .nav-link {
+  padding-top: 0 !important;
 }
 
