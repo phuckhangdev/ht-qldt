@@ -42,3 +42,12 @@ $fa-font-path: "../webfonts";
 .navbar-expand .navbar-nav .nav-link {
     padding-top: 0 !important;
 }
+
+.sidebar-dark-primary .nav-sidebar > .nav-item.menu-open > .nav-link, .sidebar-dark-primary .nav-sidebar > .nav-item:hover > .nav-link {
+    color: #ffffff !important;
+    background-color: #007bff !important;
+}
+
+.nav-pills > li + li {
+    margin-left: 0px !important;
+}

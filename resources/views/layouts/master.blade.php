@@ -13,9 +13,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <title>Quản Lý Đoàn Thể</title>
 
   <link rel="stylesheet" href="/css/app.css">
+  <!-- CSRF Token -->
+  <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body class="hold-transition sidebar-mini">
-<div class="wrapper">
+<div class="wrapper" id="app">
 
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom">
@@ -24,6 +26,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
       </li>
+    </ul>
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      @role('admin')
+          <h4 style='color: red'>TRANG QUẢN TRỊ CỦA ADMIN</h4>
+      @endrole
+      @role('manager')
+          <h4 style='color: red'>TRANG QUẢN TRỊ CỦA QUẢN LÝ</h4>
+      @endrole
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -46,7 +57,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
         <div class="info">
           <a href="#" class="d-block">
-            {{ Auth::user()->tendoanvien }}
+            {{ Auth::user()->tendoanvien.' ('.Auth::user()->chucvu.')' }}
           </a>
         </div>
       </div>
@@ -86,7 +97,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </li>
             </ul>
           </li>
-
+          @perm('ds-khen-thuong-ky-luat')
           <li class="nav-item has-treeview menu-close">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-star-half-alt"></i>
@@ -108,6 +119,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <p>Danh sách kỷ luật</p>
                 </a>
               </li>
+          @endperm
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="fas fa-award nav-icon"></i>
@@ -120,9 +132,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <p>Kỷ luật</p>
                 </a>
               </li>
+          @perm('ds-khen-thuong-ky-luat')
             </ul>
           </li>
-
+          @endperm
+          @role('admin')
           <li class="nav-item has-treeview menu-close">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-book-reader"></i>
@@ -132,6 +146,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </p>
             </a>
             <ul class="nav nav-treeview">
+            
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="fas fa-graduation-cap nav-icon"></i>
@@ -144,15 +159,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <p>Đoàn khoa & Tổ</p>
                 </a>
               </li>
+          @endrole
+            @perm('xep-loai-chi-doan')
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="fas fa-trophy nav-icon"></i>
                   <p>Xếp loại Chi đoàn</p>
                 </a>
               </li>
+            @endperm
+          @role('admin')
             </ul>
           </li>
-
+          @endrole
+          @perm('ds-tham-gia-hoat-dong')
           <li class="nav-item has-treeview menu-close">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-list-alt"></i>
@@ -168,14 +188,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <p>Danh sách tham gia</p>
                 </a>
               </li>
+          @endperm
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="fas fa-bolt nav-icon"></i>
                   <p>Danh sách hoạt động</p>
                 </a>
               </li>
+              @role('admin')
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-building nav-icon"></i>
+                  <p>Cấp tổ chức</p>
+                </a>
+              </li>
+              @endrole
+          @perm('ds-tham-gia-hoat-dong')
             </ul>
           </li>
+          @endperm
 
           <li class="nav-item">
             <a href="#" class="nav-link">
@@ -183,12 +214,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <p>Văn bản Đoàn thể</p>
             </a>
           </li>
+          @role('admin')
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>Quản lý tài khoản</p>
             </a>
           </li>
+          @endrole
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
@@ -221,84 +254,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Starter Page</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Starter Page</li>
-            </ol>
-          </div><!-- /.col -->
+          
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-
-    <!-- Main content -->
-    <div class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </p>
-
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
-            </div>
-
-            <div class="card card-primary card-outline">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
-            </div><!-- /.card -->
-          </div>
-          <!-- /.col-md-6 -->
-          <div class="col-lg-6">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="m-0">Featured</h5>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">Special title treatment</h6>
-
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-
-            <div class="card card-primary card-outline">
-              <div class="card-header">
-                <h5 class="m-0">Featured</h5>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">Special title treatment</h6>
-
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <!-- /.col-md-6 -->
-        </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
 

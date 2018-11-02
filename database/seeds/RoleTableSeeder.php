@@ -13,8 +13,13 @@ class RoleTableSeeder extends Seeder
      */
     public function run()
     {
-        $admin_permission = Permission::where('slug','create-tasks')->first();
-        $manager_permission = Permission::where('slug', 'edit-users')->first();
+        $admin_permission = Permission::where('slug','xep-loai-chi-doan')->first();
+        $admin_permission1 = Permission::where('slug','ds-khen-thuong-ky-luat')->first();
+        $admin_permission2 = Permission::where('slug','ds-tham-gia-hoat-dong')->first();
+
+        $manager_permission = Permission::where('slug','xep-loai-chi-doan')->first();
+        $manager_permission1 = Permission::where('slug','ds-khen-thuong-ky-luat')->first();
+        $manager_permission2 = Permission::where('slug','ds-tham-gia-hoat-dong')->first();
 
         //RoleTableSeeder.php
         $admin_role = new Role();
@@ -22,12 +27,16 @@ class RoleTableSeeder extends Seeder
         $admin_role->name = 'Admin';
         $admin_role->save();
         $admin_role->permissions()->attach($admin_permission);
+        $admin_role->permissions()->attach($admin_permission1);
+        $admin_role->permissions()->attach($admin_permission2);
 
         $manager_role = new Role();
         $manager_role->slug = 'manager';
         $manager_role->name = 'Quản lý';
         $manager_role->save();
         $manager_role->permissions()->attach($manager_permission);
+        $manager_role->permissions()->attach($manager_permission1);
+        $manager_role->permissions()->attach($manager_permission2);
 
         $student_role = new Role();
         $student_role->slug = 'student';
