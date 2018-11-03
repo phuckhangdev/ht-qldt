@@ -9,6 +9,21 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
+
+let routes = [
+    { path: '/chidoan', component: require('./components/Chidoan.vue') },
+    { path: '/doankhoato', component: require('./components/Doankhoato.vue') }
+  ]
+
+const router = new VueRouter({
+    mode: 'history',
+    routes,
+    linkActiveClass: 'active'
+  })
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -18,5 +33,6 @@ window.Vue = require('vue');
 Vue.component('example', require('./components/Example.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    router
 });

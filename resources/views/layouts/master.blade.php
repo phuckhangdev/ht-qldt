@@ -148,16 +148,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <ul class="nav nav-treeview">
             
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <router-link to="/chidoan" class="nav-link">
                   <i class="fas fa-graduation-cap nav-icon"></i>
                   <p>Chi đoàn</p>
-                </a>
+                </router-link>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <router-link to="/doankhoato" class="nav-link">
                   <i class="fas fa-school nav-icon"></i>
                   <p>Đoàn khoa & Tổ</p>
-                </a>
+                </router-link>
               </li>
           @endrole
             @perm('xep-loai-chi-doan')
@@ -218,7 +218,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
-              <p>Quản lý tài khoản</p>
+              <p>Quản lý người dùng</p>
             </a>
           </li>
           @endrole
@@ -233,7 +233,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <a class="nav-link" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                           document.getElementById('logout-form').submit();">
-                <i class="nav-icon fas fa-sign-out-alt"></i>
+                <i class="nav-icon fas fa-sign-out-alt red"></i>
                 <p>Đăng xuất</p>
             </a>
 
@@ -253,9 +253,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
-        <div class="row mb-2">
-          
-        </div><!-- /.row -->
+        <router-view></router-view>
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
